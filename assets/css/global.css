@@ -1,0 +1,104 @@
+
+ body {
+   font-size: 100%;
+   line-height: 1.2;
+   /* color: #fff; */
+   background: #000;
+   padding-left: 88px;
+ }
+ img {
+   max-width: 100%;
+   height: auto;
+ }
+ 
+ a {
+   text-decoration: none;
+   color: #fff;
+ }
+ body img {
+   -webkit-user-select: none; /* Chrome all / Safari all */
+   -moz-user-select: none; /* Firefox all */
+   -ms-user-select: none; /* IE 10+ */
+   -o-user-select: none;
+   user-select: none;
+ }
+ *:focus {
+   outline: none;
+   -moz-box-shadow: none;
+   -webkit-box-shadow: none;
+   box-shadow: none;
+ }
+ 
+ /*
+  2.0.3) Form Elements
+  -----------------------------*/
+ /* button,
+ input,
+ optgroup,
+ select,
+ textarea {
+   font-family: "Myriad Pro Regular", sans-serif;
+ } */
+ 
+ /*** iPhone and iOS Form Input Zoom Fixes ***/
+ /* Fix Input Zoom on devices older than iPhone 5: */
+ @media screen and (max-device-width: 767px) {
+   select,
+   textarea,
+   input[type="text"],
+   input[type="password"],
+   input[type="datetime"],
+   input[type="datetime-local"],
+   input[type="date"],
+   input[type="month"],
+   input[type="time"],
+   input[type="week"],
+   input[type="number"],
+   input[type="email"],
+   input[type="tel"],
+   input[type="url"] {
+     font-size: 16px !important;
+   }
+ }
+ /*
+  2.0.4) List Styles
+  ---------------------------------*/
+ ul,
+ ol {
+   padding: 0;
+   margin: 0;
+   list-style-type: none;
+ }
+ 
+ /* Containers*/
+ .container {
+   max-width: 1472px;
+   padding: 0 20px;
+   width: 100%;
+   margin: 0 auto;
+ }
+ 
+ /* slick dots */
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 103%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slick-dots li button{
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 0;
+  
+  background: #f19696;
+}
+ li.slick-active button{
+  background: #ed7878;
+ } 
