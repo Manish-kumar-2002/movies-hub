@@ -73,36 +73,69 @@ $(document).ready(function(){
 
 
 
-$(document).ready(function () {
-  $(window).scroll(function () {
-      var scrollTop = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      var bannerHeight = $('.banner').height();
+// $(document).ready(function () {
+//   $(window).scroll(function () {
+//       var scrollTop = $(window).scrollTop();
+//       var windowHeight = $(window).height();
+//       var bannerHeight = $('.banner').height();
 
-      if (scrollTop < bannerHeight) {
-          var opacity = scrollTop / bannerHeight;
+//       if (scrollTop < bannerHeight) {
+//           var opacity = scrollTop / bannerHeight;
 
-          $('.banner::after').css({
-            'content':`""`,
-              'background': `linear-gradient(to bottom, rgba(0, 0, 0, ${opacity}), rgba(0, 0, 0, 1))`
-          });
-      } else {
-          $('.banner::after').css({
-            'content':`""`,
-              'background': 'black'
-          });
-      }
+//           $('.banner::after').css({
+//             'content':`""`,
+//               'background': `linear-gradient(to bottom, rgba(0, 0, 0, ${opacity}), rgba(0, 0, 0, 1))`
+//           });
+//       } else {
+//           $('.banner::after').css({
+//             'content':`""`,
+//               'background': 'black'
+//           });
+//       }
 
-      if (scrollTop <= 0) {
-          $('.banner::after').css({
-              'background': 'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))'
-          });
-      }
+//       if (scrollTop <= 0) {
+//           $('.banner::after').css({
+//               'background': 'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))'
+//           });
+//       }
+//   });
+// });
+
+
+$(document).ready(function() {
+  $(window).on('scroll', function() {
+    var scrollTop = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var bannerHeight = $('.banner').height();
+    
+    // Calculate how far the banner has scrolled as a percentage
+    var scrollPercent = Math.min(scrollTop / (bannerHeight / 2), 1);
+    
+    if (scrollPercent >= 1) {
+      // Determine the opacity for the gradient
+      var opacity = (scrollPercent - 1) * 0.8; // Adjust the multiplier for the desired darkness
+      
+      // Set the background gradient
+      // $('.banner::after').css('background', `linear-gradient(rgba(0,0,0,${opacity}), rgba(0,0,0,${opacity})), #fff`);
+      $('.banner').addClass("add-after");
+    } else {
+      // Remove the gradient background
+      // $('.banner::after').css('background', '#fff');
+      $('.banner').removeClass("add-after");
+    }
   });
 });
 
 
 
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 5,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 
 const body = document.querySelector('body'),
