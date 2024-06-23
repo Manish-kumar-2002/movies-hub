@@ -4,7 +4,8 @@
    line-height: 1.2;
    /* color: #fff; */
    background: #000;
-   padding-left: 88px;
+   /* margin-left: 88px; */
+   /* width: calc(100vw - 108px); */
  }
  img {
    max-width: 100%;
@@ -72,8 +73,8 @@
  
  /* Containers*/
  .container {
-   max-width: 1472px;
-   padding: 0 20px;
+   max-width: 100% !important;
+   /* padding: 0 20px; */
    width: 100%;
    margin: 0 auto;
  }
@@ -91,9 +92,9 @@
   transform: translate(-50%, -50%);
 }
 .slick-dots li button{
-  width: 10px;
+  width: 16px;
   height: 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border: none;
   font-size: 0;
   

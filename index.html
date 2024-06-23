@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Click</title>
     <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
-     <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -60,19 +60,75 @@
     </header>
 
     <section class="banner">
-        <div class="container pe-0">
-            <div class="banner-slider">
-                    <div class="swiper-slide"><img src="assets/images/banner-1.jpg" alt="banner"></div>
-                    <div class="swiper-slide"><img src="assets/images/banner-1.jpg" alt="banner"></div>
-                    <div class="swiper-slide"><img src="assets/images/banner-1.jpg" alt="banner"></div>
+        <div class="container px-0">
+
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="assets/images/banner-1.jpg" alt="banner"> </div>
+
+
+                    <div class="swiper-slide"><img src="assets/images/banner-2.jpg" alt="banner">
+
+                    </div>
+                    <div class="swiper-slide"><img src="assets/images/banner-3.jpg" alt="banner">
+
+
+                    </div>
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+
+
+            <div class="swiper-another">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="row banner-text">
+                            <div class="col-6">
+                                <h4>IPL</h4>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="row banner-text">
+                            <div class="col-6">
+                                <h4>Salaar</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="row banner-text">
+                            <div class="col-6">
+                                <h4>a mountain between us</h4>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
 
+    <section class="other-section"></section>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
-     <script src="assets/js/slick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/slick.js"></script>
     <script src="assets/js/custom.js"></script>
 </body>
 
